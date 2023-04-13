@@ -1,0 +1,21 @@
+@startuml 出欠席管理システム
+left to right direction
+actor 利用者#DDDDDD;line:black;line.bold;
+actor 管理者#DDDDDD;line:black;line.bold;
+rectangle 出席管理システム {
+usecase 会員登録する 
+usecase ログインする
+usecase 生徒を登録する 
+usecase 教科を登録する
+usecase 時間割をを登録する
+usecase 出欠席を登録する
+usecase 出席率を表示する
+}
+会員登録する <-- 管理者
+利用者--> ログインする
+利用者--> 生徒を登録する
+利用者--> 教科を登録する
+利用者--> 時間割をを登録する
+利用者--> 出欠席を登録する
+利用者 --> 出席率を表示する
+@enduml
